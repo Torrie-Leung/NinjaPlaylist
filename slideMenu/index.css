@@ -1,0 +1,85 @@
+/* start styles */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&family=VT323&display=swap');
+
+body {
+  margin: 0;
+  background: #444;
+  font-family: "Poppins";
+}
+li, ul {
+  list-style-type: none;
+  padding: 0;
+}
+main {
+  padding: 140px 40px 40px;
+  color: #bbb;
+}
+
+/* solution styles */
+.menu{
+
+}
+header{
+  background: #333;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  box-sizing: border-box;
+  color: #41de41;
+}
+.burger{
+  position: relative;
+  font-size: 1.2em;
+  cursor: pointer;
+  z-index: 1;
+}
+.burger span{
+  display: block;
+  width: 30px;
+  height: 2px;
+  background: #41de41;
+  margin-bottom: 5px;
+}
+nav{
+  position: absolute;
+  top: 0;
+  left: -200px;
+  box-sizing: border-box;
+  background: #222;
+  padding: 20px;
+  padding-top: 80px;
+  height: 100%;
+  width: 200px;
+  z-index: 0;
+}
+nav a{
+  color: #07a107;
+  display: block;
+  margin-bottom: 6px;
+  font-size: 1.2em;
+  
+}
+/* open state */
+nav.open{
+  left: 0;
+}
+.burger.open span:first-child{
+  transform: rotate(45deg) translateY(10px);
+}
+.burger.open span:nth-child(2){
+  opacity: 0;
+  width: 0;
+}
+.burger.open span:last-child{
+  transform: rotate(-45deg) translateY(-10px);
+}
+
+
+/* transitions */
+nav{
+  transition: left ease-in 0.3s;
+}
+.burger span{
+  transition: all ease-in 0.3s;
+}
